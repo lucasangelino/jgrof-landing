@@ -1,0 +1,109 @@
+---
+import CopyToClipboard from "./CopyToClipboard.astro";
+import Tabs from "./Tabs.astro";
+---
+
+<section>
+    <div class="overflow-hidden bg-zinc-100 py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <h2
+                class="mt-2 text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl"
+            >
+                Installation and Set Up
+            </h2>
+            <article>
+                <p class="mt-6 text-lg leading-8 text-gray-600 mb-10">
+                    Vitai is a npm library that you can install in your project.
+                    It provides a friendly CLI interface to help you on the
+                    process.
+                </p>
+
+                <ol
+                    class="relative text-gray-500 border-s border-gray-200 dark:border-gray-700 dark:text-gray-400"
+                >
+                    <li class="mb-10 ms-6">
+                        <span
+                            class="absolute flex items-center justify-center w-8 h-8 bg-zinc-800 rounded-full -start-4 ring-4 ring-white"
+                        >
+                            <svg
+                                class="w-3.5 h-3.5 text-zinc-100"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 16 12"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M1 5.917 5.724 10.5 15 1.5"></path>
+                            </svg>
+                        </span>
+                        <h3 class="font-medium leading-tight text-zinc-800">
+                            Install npm Vitai Library.
+                        </h3>
+                        <p class="text-zinc-700">
+                            Run the following command in you favourite terminal
+                            to install Vitai npm library
+                        </p>
+                        <p class="text-sm">
+                            <Tabs />
+                        </p>
+                    </li>
+                    <li class="mb-10 ms-6">
+                        <span
+                            class="absolute flex items-center justify-center w-8 h-8 bg-zinc-800 rounded-full -start-4 ring-4 ring-white"
+                        >
+                            <svg
+                                class="w-3.5 h-3.5 text-zinc-100"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 16 12"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M1 5.917 5.724 10.5 15 1.5"></path>
+                            </svg>
+                        </span>
+                        <h3 class="font-medium leading-tight text-zinc-800">
+                            Add basic config
+                        </h3>
+                        <p class="text-zinc-700">
+                            Update your package.json scripts and add: "test:ai":
+                            "npm run vitai"
+                        </p>
+                    </li>
+                    <li class="mb-10 ms-6">
+                        <span
+                            class="absolute flex items-center justify-center w-8 h-8 bg-zinc-800 rounded-full -start-4 bottom-1 ring-4 ring-white"
+                        >
+                            <svg
+                                class="w-3.5 h-3.5 text-zinc-100"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 16 12"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M1 5.917 5.724 10.5 15 1.5"></path>
+                            </svg>
+                        </span>
+                        <h3 class="font-medium leading-tight text-zinc-800">
+                            Run Vitai
+                        </h3>
+                        <p class="text-zinc-700">Step details here</p>
+                    </li>
+                </ol>
+            </article>
+        </div>
+    </div>
+</section>

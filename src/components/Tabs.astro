@@ -1,0 +1,80 @@
+<div class="max-w-2xl mx-auto mt-10">
+    <div class="flex justify-center space-x-4 mb-4">
+        <button id="npm-tab" class="tab-btn active border-b-2 border-x-zinc-700"
+            >npm</button
+        >
+        <button id="pnpm-tab" class="tab-btn">pnpm</button>
+        <button id="yarn-tab" class="tab-btn">yarn</button>
+    </div>
+    <div class="bg-gray-100 border border-gray-300 rounded-lg shadow-md">
+        <div
+            class="flex items-center p-2 bg-zinc-800 border-b border-gray-300 rounded-t-lg"
+        >
+            <div class="flex space-x-2">
+                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+            </div>
+            <div class="flex-1 text-center text-zinc-300 text-sm">Terminal</div>
+        </div>
+        <div id="npm-content" class="tab-content p-4 bg-gray-800 rounded-b-lg">
+            <p class="text-zinc-100">
+                <span class="text-lime-600 text-xl">npx </span>install vitai -D
+            </p>
+        </div>
+    </div>
+    <div id="pnpm-content" class="tab-content p-4 bg-gray-800 rounded-b-lg">
+        <p class="text-zinc-100">
+            <span class="text-lime-600 text-xl">pnpx </span>install vitai -D
+        </p>
+    </div>
+    <div id="yarn-content" class="tab-content p-4 bg-gray-800 rounded-b-lg">
+        <p class="text-zinc-100">
+            <span class="text-lime-600 text-xl">yarn </span>install vitai -D
+        </p>
+    </div>
+</div>
+
+<script>
+    const npmTab = document.getElementById("npm-tab");
+    const pnpmTab = document.getElementById("pnpm-tab");
+    const yarnTab = document.getElementById("yarn-tab");
+
+    npmTab.addEventListener("click", () => showTab("npm"));
+    pnpmTab.addEventListener("click", () => showTab("pnpm"));
+    yarnTab.addEventListener("click", () => showTab("yarn"));
+
+    showTab("npm");
+
+    function showTab(tab) {
+        document.querySelectorAll(".tab-content").forEach((content) => {
+            content.classList.add("hidden");
+        });
+
+        document.querySelectorAll(".tab-btn").forEach((button) => {
+            button.classList.remove("active");
+        });
+
+        document.getElementById(`${tab}-content`).classList.remove("hidden");
+        document.getElementById(`${tab}-tab`).classList.add("active");
+    }
+</script>
+
+<style>
+    .tab-btn {
+        padding: 0.5rem;
+        border-radius: 0.375rem;
+        cursor: pointer;
+        border-bottom: 1px;
+    }
+
+    .tab-btn.active {
+        border-bottom: 1px;
+        color: #27272a;
+        font-weight: bold;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
