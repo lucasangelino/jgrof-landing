@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CopyToClipboard from "../components/CopyToClipboard.astro";
+import LearnMore from "../components/LearnMore.astro";
+---
+
+<Layout title="Vitai | Modern Testing Tool Powered By AI">
+	<main
+		class="relative min-h-screen max-w-[1100px] mx-auto justify-center p-24 w-full"
+	>
+		<div class="flex flex-col gap-5 min-h-screen mx-auto items-center">
+			<button
+				class="relative inline-flex h-8 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+			>
+				<span
+					class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
+				></span>
+				<span
+					class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-zinc-50 px-8 py-1 text-sm font-medium text-zinc-500 backdrop-blur-3xl"
+				>
+					CloudCi | Test & CI/CD
+				</span>
+			</button>
+			<h2
+				class="text-center text-3xl font-medium text-zinc-800 sm:text-6xl"
+			>
+				Modern Auto Testing and
+				<span
+					class="animate-text-gradient inline-flex bg-gradient-to-r from-zinc-800 via-lime-500 to-lime-500 bg-[200%_auto] bg-clip-text leading-tight text-transparent"
+				>
+					and Deployment tool.
+				</span>
+			</h2>
+			<p class="text-balance max-w-xl text-center">
+				CloudCi create tests and CI/CD files in your Github repo. Put
+				the url, check the Pull Request and merge it. It's Magic.
+			</p>
+			<section class="flex flex-row gap-4">
+				<button class="bg-zinc-800 text-zinc-100 p-2 rounded-lg">
+					Get Started
+				</button>
+				<button
+					class="border border-zinc-800 text-zinc-800 p-2 rounded-lg"
+				>
+					Learn More
+				</button>
+			</section>
+			<div class="max-w-md mx-auto mt-8 rounded-lg bg-zinc-200">
+				<div
+					class="flex items-center justify-between bg-gray-100 p-2 rounded-md"
+				>
+					<span class="text-sm font-mono text-zinc-800"
+						>npx install vitai -D</span
+					>
+					<CopyToClipboard text="npx install vitai -D" />
+				</div>
+			</div>
+		</div>
+		<LearnMore />
+	</main>
+</Layout>
