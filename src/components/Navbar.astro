@@ -1,4 +1,6 @@
 ---
+import GithubStar from "./GithubStar.astro";
+
 const twitterText = "Vitai | Modern Vitest Runner Powered by AI";
 const hashtags = "vitai, vitest, ai";
 const url = "https://google.com";
@@ -17,59 +19,7 @@ if (res.ok) {
 <nav class="max-w-[1400px]">
 	<ul class="flex flex-row gap-5 items-center justify-end px-8 py-4">
 		<li>
-			<a
-				href={`https://twitter.com/intent/tweet?url=${url}&text=${twitterText}&hashtags=${hashtags}`}
-				target="_blank"
-				class="relative z-10"
-			>
-				<svg
-					class="icon icon-tabler icon-tabler-brand-x"
-					width="30"
-					height="30"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="#2c3e50"
-					fill="none"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-				>
-					<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-					<path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
-					<path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
-				</svg>
-			</a>
-		</li>
-		<li>
-			<a href="https://github.com/lucasangelino/vitai2" target="_blank">
-				<div class="flex flex-row">
-					<div
-						class="flex flex-row gap-4 border border-zinc-300 items-center bg-zinc-100 relative z-10 py-2 px-4 rounded-l-md font-bold text-zinc-800"
-					>
-						<svg
-							class="w-6 h-6 text-gray-800"
-							aria-hidden="true"
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							fill="none"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke="currentColor"
-								stroke-width="2"
-								d="M11.083 5.104c.35-.8 1.485-.8 1.834 0l1.752 4.022a1 1 0 0 0 .84.597l4.463.342c.9.069 1.255 1.2.556 1.771l-3.33 2.723a1 1 0 0 0-.337 1.016l1.03 4.119c.214.858-.71 1.552-1.474 1.106l-3.913-2.281a1 1 0 0 0-1.008 0L7.583 20.8c-.764.446-1.688-.248-1.474-1.106l1.03-4.119A1 1 0 0 0 6.8 14.56l-3.33-2.723c-.698-.571-.342-1.702.557-1.771l4.462-.342a1 1 0 0 0 .84-.597l1.753-4.022Z"
-							></path>
-						</svg>
-
-						Star
-					</div>
-					<div
-						class="border border-zinc-300 items-center bg-zinc-100 relative z-10 py-2 px-2 rounded-r-md font-bold text-zinc-800"
-					>
-						{stars}
-					</div>
-				</div>
-			</a>
+			<GithubStar />
 		</li>
 	</ul>
 </nav>
